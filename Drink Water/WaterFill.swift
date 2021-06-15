@@ -30,21 +30,24 @@ struct WaterFill: View {
                 }
                 .overlay(
                     Text("\(self.percent)%")
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
+                        .shadow(color: .black, radius: 3, x: 0.0, y: 0.0)
                             .font(Font.system(size: 0.25 * min(geo.size.width, geo.size.height)))
                 )
             }
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 80, alignment: .center)
             .aspectRatio(1, contentMode: .fit)
             .onAppear {
                 withAnimation(Animation.linear(duration: 2).repeatForever(autoreverses: false)) {
                 self.waveOffset = Angle(degrees: 360)
                 }
             }
+            
         }
     }
 
 struct WaterFill_Previews: PreviewProvider {
     static var previews: some View {
-        WaterFill(percent: 50)
+        WaterFill(percent: 0)
     }
 }
