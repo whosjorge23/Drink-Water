@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED2983C926778B2B004325AE /* WaterFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2983C826778B2B004325AE /* WaterFill.swift */; };
 		EDEC098126762F4F004783B7 /* Drink_WaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC098026762F4F004783B7 /* Drink_WaterApp.swift */; };
 		EDEC098326762F4F004783B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC098226762F4F004783B7 /* ContentView.swift */; };
 		EDEC098526762F51004783B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDEC098426762F51004783B7 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED2983C826778B2B004325AE /* WaterFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFill.swift; sourceTree = "<group>"; };
 		EDEC097D26762F4F004783B7 /* Drink Water.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drink Water.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEC098026762F4F004783B7 /* Drink_WaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink_WaterApp.swift; sourceTree = "<group>"; };
 		EDEC098226762F4F004783B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				EDEC098026762F4F004783B7 /* Drink_WaterApp.swift */,
 				EDEC098226762F4F004783B7 /* ContentView.swift */,
+				ED2983C826778B2B004325AE /* WaterFill.swift */,
 				EDEC099026762F96004783B7 /* WaveForm.swift */,
 				EDEC098426762F51004783B7 /* Assets.xcassets */,
 				EDEC098926762F51004783B7 /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2983C926778B2B004325AE /* WaterFill.swift in Sources */,
 				EDEC099126762F96004783B7 /* WaveForm.swift in Sources */,
 				EDEC098326762F4F004783B7 /* ContentView.swift in Sources */,
 				EDEC098126762F4F004783B7 /* Drink_WaterApp.swift in Sources */,
