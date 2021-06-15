@@ -9,14 +9,32 @@ import SwiftUI
 
 struct WaveForm: View {
     @State var percent = 0.0
-        
+    @State var changeView = true
         var body: some View {
-            VStack {
-                CircleWaveView(percent: Int(self.percent))
-                Slider(value: self.$percent, in: 0...100)
-                    .accentColor(Color(red: 0, green: 0.5, blue: 0.75, opacity: 0.5))
+            ZStack{
+                if changeView {
+                    VStack {
+                        CircleWaveView(percent: Int(self.percent))
+                        Slider(value: self.$percent, in: 0...100)
+                            .accentColor(Color(red: 0, green: 0.5, blue: 0.75, opacity: 0.5))
+                        Button(action: {
+                            changeView = false
+                        }, label: {
+                            RoundedRectangle(cornerRadius: 25.0)
+                                .frame(width: 100, height: 50, alignment: .center)
+                                .foregroundColor(Color(red: 0, green: 0.5, blue: 0.75, opacity: 0.7))
+                                .overlay(
+                                    Text("Go Back")
+                                        .foregroundColor(.white)
+                                )
+                        })
+                    }
+                    .padding(.all)
+                }else {
+                    ContentView()
+                }
             }
-            .padding(.all)
+            
         }
 }
 
@@ -92,6 +110,6 @@ struct CircleWaveView: View {
 
 struct WaveForm_Previews: PreviewProvider {
     static var previews: some View {
-        CircleWaveView(percent: 58)
+        CircleWaveView(percent: 50)
     }
 }

@@ -21,7 +21,7 @@ struct WaterFill: View {
                         .font(Font.system(size: 0.25 * min(geo.size.width, geo.size.height) ))
                     RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
                         .foregroundColor(.white)
-                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
+                        .frame(width: UIScreen.main.bounds.width + 5, height: UIScreen.main.bounds.height, alignment: .center)
                         .overlay(
                             Wave(offset: Angle(degrees: self.waveOffset.degrees), percent: Double(percent)/100)
                                 .fill(Color(red: 0, green: 0.5, blue: 0.75, opacity: 0.5))
@@ -45,6 +45,6 @@ struct WaterFill: View {
 
 struct WaterFill_Previews: PreviewProvider {
     static var previews: some View {
-        WaterFill(percent: 20)
+        WaterFill(percent: 50)
     }
 }
